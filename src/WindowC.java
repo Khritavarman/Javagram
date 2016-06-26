@@ -13,7 +13,9 @@ public class WindowC extends JFrame {
         setSize(800, 600);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setVisible(true);
     }
 
+    public FormC getFormC() {
+        return formC;
+    }
 }

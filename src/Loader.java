@@ -1,11 +1,14 @@
+import com.sun.corba.se.pept.transport.ContactInfoList;
 import org.javagram.TelegramApiBridge;
 import org.javagram.response.AuthAuthorization;
 import org.javagram.response.AuthCheckedPhone;
+import org.javagram.response.object.UserContact;
 
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Created by Akharu on 6/26/2016.
@@ -45,8 +48,9 @@ public class Loader {
         WindowA windowA = new WindowA();
         WindowB windowB = new WindowB();
         WindowC windowC = new WindowC();
+        windowA.setVisible(true);
 
-        /*windowA.getFormA().getButton().addMouseListener(new MouseAdapter() {
+        windowA.getFormA().getButton().addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
@@ -54,7 +58,7 @@ public class Loader {
                     String phoneNumber = windowA.getFormA().getPhoneNumberField().getText();
                     AuthCheckedPhone authCheckedPhone = bridge.authCheckPhone(phoneNumber);
                     if (authCheckedPhone.isRegistered()) {
-                        //bridge.authSendCode(phoneNumber);
+                        bridge.authSendCode(phoneNumber);
                         windowB.getFormB().getPhoneNumberField().setText(phoneNumber);
                         windowB.setVisible(true);
                         windowA.dispose();
@@ -73,12 +77,20 @@ public class Loader {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-
-                    //AuthAuthorization authorizedUser = bridge.authSignIn(windowB.getFormB().getAuthorizationCodeField().getText());
+                try {
+                    AuthAuthorization authorizedUser = bridge.authSignIn(windowB.getFormB().getAuthorizationCodeField().getText());
                     windowC.setVisible(true);
+                    ArrayList<Integer> list = new ArrayList<Integer>();
+                    list.add(6);
+                    list.add(8);
+                    for (Integer userContact : list) {
+                        windowC.getFormC().getContactList().setText(userContact.toString());
+                    }
                     windowB.dispose();
-
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
             }
-        });*/
+        });
     }
 }

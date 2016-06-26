@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="FormC">
   <grid id="27dc6" binding="rootPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
-      <xy x="20" y="20" width="736" height="400"/>
+      <xy x="20" y="20" width="742" height="462"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -32,12 +32,6 @@
         <border type="none"/>
         <children/>
       </grid>
-      <grid id="619cd" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
-        <constraints border-constraint="West"/>
-        <properties/>
-        <border type="none"/>
-        <children/>
-      </grid>
       <grid id="66b61" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
         <constraints border-constraint="South"/>
         <properties/>
@@ -49,39 +43,11 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="4ffee" class="javax.swing.JLabel">
+          <component id="537b4" class="javax.swing.JTextArea" binding="contactList">
             <constraints/>
             <properties>
-              <text value="Javagram"/>
-            </properties>
-          </component>
-          <component id="c6f10" class="javax.swing.JLabel">
-            <constraints/>
-            <properties>
-              <text value="Введите Ваши имя и фамилию"/>
-            </properties>
-          </component>
-          <component id="1bc28" class="javax.swing.JTextField" binding="name">
-            <constraints/>
-            <properties>
-              <maximumSize width="200" height="40"/>
-              <minimumSize width="200" height="40"/>
-              <preferredSize width="200" height="40"/>
-            </properties>
-          </component>
-          <component id="636c6" class="javax.swing.JTextField" binding="surname">
-            <constraints/>
-            <properties>
-              <inheritsPopupMenu value="false"/>
-              <maximumSize width="200" height="40"/>
-              <minimumSize width="200" height="40"/>
-              <preferredSize width="200" height="40"/>
-            </properties>
-          </component>
-          <component id="6954e" class="javax.swing.JButton" binding="button">
-            <constraints/>
-            <properties>
-              <text value="Button"/>
+              <minimumSize width="400" height="400"/>
+              <preferredSize width="400" height="400"/>
             </properties>
           </component>
         </children>

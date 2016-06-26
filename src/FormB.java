@@ -9,7 +9,7 @@ public class FormB {
     private JButton button1;
     private JButton button2;
     private JPanel lowerPanel;
-    private JTextField authorizationCodeField;
+    private JPasswordField authorizationCodeField;
     private JButton button;
     private JLabel phoneNumberField;
 
@@ -30,7 +30,7 @@ public class FormB {
         return button;
     }
 
-    public JTextField getAuthorizationCodeField() {
+    public JPasswordField getAuthorizationCodeField() {
         return authorizationCodeField;
     }
 }
